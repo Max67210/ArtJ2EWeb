@@ -14,11 +14,15 @@ public class artServlet extends HttpServlet{
     
     public void doPost (HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         HttpSession session = req.getSession(false);
+        System.out.println("test");
 	if (session == null) {
 	    res.sendRedirect("/WEB-INF/html/erreur.html");
 	}
         else {
-            res.sendRedirect("/jsp/acceuil.jsp");
+            String action = req.getParameter("action");
+            if (action.equals("afficher")) {
+                System.out.println("test2");
+            }
         }
     }
     
