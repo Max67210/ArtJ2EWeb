@@ -18,7 +18,7 @@ public class artServlet extends HttpServlet{
 	    res.sendRedirect("/WEB-INF/html/erreur.html");
 	}
         else {
-            res.sendRedirect("/jsp/test.jsp");
+            res.sendRedirect("/jsp/acceuil.jsp");
         }
     }
     

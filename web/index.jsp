@@ -1,7 +1,5 @@
 <%-- 
     Document   : index
-    Created on : 13 déc. 2013, 14:06:03
-    Author     : Mexios
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -12,6 +10,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Page Principal JSP</h1>
+        <form name="affichage" action="../WEB-INF/src/artServlet" method="POST">
+          <p>Bonjour, il est <%=new java.util.Date()%></p>
+	  <input type="hidden" name="action" value="ADD">
+	  <input type="submit" name="Submit" value="Add to Cart">
+	</form>
     </body>
 </html>
